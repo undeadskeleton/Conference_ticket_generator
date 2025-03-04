@@ -1,0 +1,15 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  font-family: "Inconsolata", monospace;
+  background-image: url(/assets/images/background-mobile.png);
+  height: 100vh;
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: $Neutral0;
+}
