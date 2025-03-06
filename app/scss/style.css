@@ -10,7 +10,7 @@ body {
 
 .form_container {
   padding: 1.5rem 0.5rem;
-  background-image: url(app/scss/assets/images/background-mobile.png);
+  background-image: url(assets/images/background-mobile.png);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
