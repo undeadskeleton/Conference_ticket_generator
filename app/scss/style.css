@@ -152,7 +152,9 @@ body {
   line-height: 1.15;
 }
 .form_input {
-  justify-self: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   width: 95%;
 }
 @media (min-width: 430px) {
