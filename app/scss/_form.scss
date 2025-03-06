@@ -8,12 +8,12 @@
     color: $Neutral0;
     // height: 1132px;
     width: 100vw;
-    height: 93vh;
     display: flex;
     flex-wrap: wrap;
     position: relative;
     overflow-x: hidden;
     overflow-y: hidden;
+    padding-bottom: 7rem;
 
     @media (min-width: 430px) {
       display: flex;
@@ -53,7 +53,7 @@
       background-image: url("assets/images/pattern-squiggly-line-bottom-mobile-tablet.svg");
       background-size: cover;
       position: absolute;
-      height: 30%;
+      height: 200px;
       width: 100%;
       top: 82%;
       background-size: 70%;
@@ -155,9 +155,9 @@
       width: 70%;
     }
 
-    > div {
-      margin-bottom: 2rem;
-    }
+    // > div {
+    //   margin-bottom: 2rem;
+    // }
 
     .desc {
       font-size: 1.5rem;
@@ -225,7 +225,7 @@
   &_githubUsername input {
     width: 95%;
     height: 60px;
-    margin: 0 0.5rem;
+    margin: 1.5rem 0.5rem;
     background: transparent;
     border: 1px solid $Neutral700;
     border-radius: 10px;

@@ -16,12 +16,12 @@ body {
   background-position: center;
   color: hsl(0, 0%, 100%);
   width: 100vw;
-  height: 93vh;
   display: flex;
   flex-wrap: wrap;
   position: relative;
   overflow-x: hidden;
   overflow-y: hidden;
+  padding-bottom: 7rem;
 }
 @media (min-width: 430px) {
   .form_container {
@@ -61,7 +61,7 @@ body {
   background-image: url("assets/images/pattern-squiggly-line-bottom-mobile-tablet.svg");
   background-size: cover;
   position: absolute;
-  height: 30%;
+  height: 200px;
   width: 100%;
   top: 82%;
   background-size: 70%;
@@ -155,9 +155,6 @@ body {
     width: 70%;
   }
 }
-.form_input > div {
-  margin-bottom: 2rem;
-}
 .form_input .desc {
   font-size: 1.5rem;
   margin-bottom: 1rem;
@@ -213,7 +210,7 @@ body {
 .form_name input, .form_email input, .form_githubUsername input {
   width: 95%;
   height: 60px;
-  margin: 0 0.5rem;
+  margin: 1.5rem 0.5rem;
   background: transparent;
   border: 1px solid hsl(245, 19%, 35%);
   border-radius: 10px;
