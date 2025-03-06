@@ -4,99 +4,225 @@
   box-sizing: border-box;
 }
 
+html,
 body {
   font-family: "Inconsolata", monospace;
+  overflow: hidden;
 }
 
 .form_container {
-  padding: 1.5rem 0.5rem;
-  background-image: url(assets/images/background-mobile.png);
+  padding: 0 0.2rem;
+  background-image: url("assets/images/background-mobile.png");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
   color: hsl(0, 0%, 100%);
   width: 100vw;
-  height: 100vh;
-  max-height: 1202px;
   display: flex;
   flex-wrap: wrap;
+  position: relative;
+  padding-bottom: 4rem;
+}
+@media (min-width: 430px) {
+  .form_container {
+    display: flex;
+    justify-content: center;
+    background-image: url("assets/images/background-desktop.png");
+    background-size: cover;
+  }
+}
+.form_container .bgline {
+  background-image: url("assets/images/pattern-lines.svg");
+  height: 55%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  background-repeat: no-repeat;
+  z-index: 2;
+}
+.form_container .squigly_line {
+  background-image: url("assets/images/pattern-squiggly-line-top.svg");
+  background-repeat: no-repeat;
+  position: absolute;
+  background-size: contain;
+  height: 100px;
+  width: 100px;
+  right: 0;
+  top: 31px;
+}
+@media (min-width: 430px) {
+  .form_container .squigly_line {
+    height: 400px;
+    width: 400px;
+    top: 70px;
+  }
+}
+.form_container .pattern {
+  background-image: url("assets/images/pattern-squiggly-line-bottom-mobile-tablet.svg");
+  background-size: cover;
+  position: absolute;
+  height: 30%;
+  width: 100%;
+  bottom: -12%;
+  background-size: 70%;
+  background-repeat: no-repeat;
+}
+@media (min-width: 430px) {
+  .form_container .pattern {
+    background-image: url("assets/images/pattern-squiggly-line-bottom-desktop.svg");
+    background-size: contain;
+    position: absolute;
+    left: -181px;
+    top: 44%;
+    height: 100%;
+    width: 100%;
+  }
+}
+.form_container .bgcircle_top {
+  background-image: url("/app/scss/assets/images/pattern-circle.svg");
+  background-repeat: no-repeat;
+  background-size: 30%;
+  width: 50%;
+  height: 100%;
+  position: absolute;
+  top: -22px;
+  left: -19px;
+}
+@media (min-width: 430px) {
+  .form_container .bgcircle_top {
+    background-size: 30%;
+    top: -93px;
+    left: 95px;
+  }
+}
+.form_container .bgcircle_bottom {
+  background-image: url("/app/scss/assets/images/pattern-circle.svg");
+  background-repeat: no-repeat;
+  background-size: 50%;
+  width: 50%;
+  height: 100%;
+  position: absolute;
+  right: -36%;
+  top: 53%;
+}
+@media (min-width: 430px) {
+  .form_container .bgcircle_bottom {
+    background-size: 30%;
+    right: -36%;
+    top: 53%;
+  }
+}
+@media (min-width: 430px) {
+  .form_container form {
+    max-width: 50%;
+  }
 }
 .form_hero_logo {
   justify-self: center;
-  margin-top: 1rem;
+  margin-top: 2rem;
   margin-bottom: 2rem;
 }
 .form_hero_title {
   text-align: center;
-  max-width: 90%;
+  width: 100%;
   font-size: 2rem;
+  line-height: 1.1;
   justify-self: center;
+  margin-top: 3rem;
   margin-bottom: 1.5rem;
+  word-spacing: 2px;
+}
+@media (min-width: 430px) {
+  .form_hero_title {
+    font-size: 3rem;
+    line-height: 1.3;
+  }
 }
 .form_hero_Desc {
+  font-size: 1.4rem;
   text-align: center;
-  max-width: 80%;
+  padding: 0 1rem;
   justify-self: center;
-  word-spacing: 13px;
-  margin-bottom: 2rem;
+  margin-bottom: 3rem;
+  line-height: 1.15;
 }
 .form_input {
   justify-self: center;
   width: 95%;
+}
+@media (min-width: 430px) {
+  .form_input {
+    width: 70%;
+  }
 }
 .form_input > div {
   margin-bottom: 2rem;
 }
 .form_input .desc {
   font-size: 1.5rem;
-  margin-bottom: 0.5rem;
+  margin-bottom: 1rem;
   margin-top: 1rem;
+  padding-left: 0.5rem;
+}
+@media (min-width: 421px) {
+  .form_input .desc {
+    font-size: 2rem;
+  }
+}
+.form_input_avatar {
+  padding: 0 1rem;
 }
 .form_input_avatar .dragdrop {
   width: 100%;
-  height: 150px;
+  height: 146px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   border: 1px dashed white;
   border-radius: 10px;
+  background-color: hsla(245, 19%, 35%, 0.233);
+  position: relative;
 }
 .form_input_avatar .dragdrop input {
   opacity: 0;
+  width: 100%;
+  height: 100%;
+  position: absolute;
 }
 .form_input_avatar .dragdrop label:first-of-type {
+  border: 0.1px solid hsl(245, 15%, 58%);
   padding: 0.5rem;
   border-radius: 10px;
-  background: hsl(252, 6%, 83%);
-  opacity: 0.2;
+  background: hsl(245, 15%, 58%);
   margin-top: 1rem;
-  margin-bottom: 2rem;
-  color: hsl(252, 6%, 83%);
 }
 .form_input_avatar .dragdrop label:last-of-type {
   margin-top: 1rem;
   font-size: 1.2rem;
   color: hsl(245, 15%, 58%);
+  word-spacing: 5px;
 }
 .form_input_avatar .warn {
-  margin-top: 1rem;
+  margin-top: 0.5rem;
   margin-bottom: 2rem;
   color: hsl(252, 6%, 83%);
   font-size: 0.8rem;
+  word-spacing: 2px;
 }
-.form_name input,
-.form_email input,
-.form_githubUsername input {
+.form_name input, .form_email input, .form_githubUsername input {
   width: 95%;
-  height: 40px;
+  height: 60px;
   margin: 0 0.5rem;
   background: transparent;
-  border: 1px solid hsl(245, 15%, 58%);
+  border: 1px solid hsl(245, 19%, 35%);
   border-radius: 10px;
   outline: 0;
-  padding-left: 6px;
+  padding-left: 1rem;
   color: hsl(252, 6%, 83%);
+  background-color: hsla(245, 19%, 35%, 0.233);
+  font-size: 1.3rem;
+  font-family: "Inconsolata", monospace;
 }
 .form_btn {
   justify-self: center;
@@ -115,23 +241,4 @@ body {
   z-index: 5;
   border: none;
   border-radius: 10px;
-}
-
-.bgline {
-  background-image: url(assets/images/pattern-lines.svg);
-  height: 30%;
-  width: 100%;
-  position: absolute;
-  top: 0;
-  background-repeat: no-repeat;
-}
-
-.pattern {
-  background-image: url(assets/images/pattern-squiggly-line-bottom-mobile-tablet.svg);
-  height: 30%;
-  width: 100%;
-  position: absolute;
-  bottom: -130px;
-  background-size: 70%;
-  background-repeat: no-repeat;
-} /*# sourceMappingURL=style.css.map */
+}/*# sourceMappingURL=style.css.map */
