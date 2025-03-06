@@ -155,7 +155,6 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    width: 95%;
 
     @media (min-width: 430px) {
       width: 70%;
@@ -164,6 +163,11 @@
     // > div {
     //   margin-bottom: 2rem;
     // }
+
+    > div {
+      padding-left: 0.5rem;
+      padding-right: 0.5rem;
+    }
 
     .desc {
       font-size: 1.5rem;
@@ -229,7 +233,7 @@
   &_name input,
   &_email input,
   &_githubUsername input {
-    width: 95%;
+    width: 390px;
     height: 60px;
     margin: 1.5rem 0.5rem;
     background: transparent;
