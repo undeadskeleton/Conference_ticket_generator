@@ -1,10 +1,10 @@
 .form {
   &_container {
     padding: 1.5rem 0.5rem;
-    background-image: url(/assets/images/background-mobile.png);
-    background-size: fill;
+    background-image: url(/app/scss/assets/images/background-mobile.png);
+    background-size: cover;
     background-repeat: no-repeat;
-    background-position: center left 200px;
+    background-position: center;
     color: $Neutral0;
     // height: 500px;
     width: 100vw;
@@ -127,7 +127,7 @@
 }
 
 .bgline {
-  background-image: url(/assets/images/pattern-lines.svg);
+  background-image: url(/app/scss/assets/images/pattern-lines.svg);
   height: 30%;
   width: 100%;
   position: absolute;
@@ -136,7 +136,7 @@
 }
 
 .pattern {
-  background-image: url(/assets/images/pattern-squiggly-line-bottom-mobile-tablet.svg);
+  background-image: url(/app/scss/assets/images/pattern-squiggly-line-bottom-mobile-tablet.svg);
   height: 30%;
   width: 100%;
   position: absolute;
