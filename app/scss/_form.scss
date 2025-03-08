@@ -7,6 +7,7 @@
     color: $Neutral0;
     // height: 1132px;
     width: 100vw;
+    height: 100vh;
     display: flex;
     flex-wrap: wrap;
     position: relative;
@@ -78,13 +79,16 @@
         width: 50%;
         height: 123px;
         position: absolute;
+        z-index: -1;
         top: -22px;
         left: -19px;
 
         @media (min-width: 430px) {
-          background-size: 30%;
-          top: -93px;
+          background-size: 82%;
+          top: -67px;
           left: 95px;
+          width: 14%;
+          height: 167px;
         }
       }
 
@@ -99,9 +103,10 @@
         top: 53%;
 
         @media (min-width: 430px) {
-          background-size: 30%;
-          right: -36%;
-          top: 53%;
+          background-size: 23%;
+          right: -20%;
+          top: 48%;
+          height: 167px;
         }
       }
     }
@@ -112,6 +117,92 @@
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
+      }
+    }
+  }
+
+  &_ticket {
+    background-image: url("assets/images/pattern-ticket.svg");
+    background-size: 90%;
+    background-repeat: no-repeat;
+    background-position: top center;
+    width: 100%;
+    height: 212px;
+    display: flex;
+
+    @media (min-width: 430px) {
+      height: 100%;
+      width: 100%;
+      display: block;
+    }
+
+    &_details {
+      padding-top: 1rem;
+      margin-left: 2.5rem;
+
+      img {
+        @media (min-width: 430px) {
+          width: 200px;
+          height: 100px;
+          object-fit: cover;
+          border: 1px solid white;
+        }
+      }
+    }
+
+    &_user {
+      margin-left: 2.5rem;
+      display: flex;
+      margin-top: 1rem;
+      padding-left: 1.5rem;
+
+      &:last-child {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        margin-left: 1rem;
+
+        :last-child {
+          color: yellow;
+          // display: flex;
+
+          div {
+            margin-top: 0.5rem;
+            display: flex;
+            align-items: center;
+            gap: 0.2rem;
+          }
+        }
+      }
+
+      .avatar {
+        width: 60px;
+        height: 60px;
+        border-radius: 10px;
+        overflow: hidden;
+        margin-right: 1rem;
+
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: scale-down;
+        }
+      }
+    }
+    aside {
+      transform: rotate(90deg);
+      font-size: 1.5rem;
+      margin-bottom: 2.5rem;
+      font-weight: 600;
+      color: $Neutral500;
+    }
+
+    &_hidden {
+      display: none;
+
+      @media (min-width: 430px) {
+        width: 100%;
+        height: 50%;
       }
     }
   }
@@ -145,6 +236,7 @@
       margin-top: 3rem;
       margin-bottom: 1.5rem;
       word-spacing: 2px;
+      color: linear-gradient($Gradient);
 
       @media (min-width: 430px) {
         font-size: 4rem;
@@ -172,6 +264,9 @@
   }
 
   &_input {
+    position: relative;
+    z-index: 20;
+
     @media (min-width: 430px) {
       width: 70%;
     }
@@ -199,6 +294,16 @@
     &_avatar {
       justify-self: start;
       width: 100%;
+      position: relative;
+      z-index: 20;
+
+      &:hover {
+        .dragdrop {
+          background-color: $Neutral700;
+          cursor: pointer;
+        }
+      }
+
       .dragdrop {
         // width: 100%;
         height: 146px;
@@ -209,7 +314,6 @@
         border: 1px dashed white;
         border-radius: 10px;
         background-color: $Neutral7002;
-        position: relative;
 
         input {
           // opacity: 1;
@@ -219,6 +323,14 @@
           // cursor: pointer;
           // height: 150px;
           opacity: 0;
+
+          &:hover {
+            cursor: pointer;
+          }
+
+          &:focus {
+            border: 1px solid $Neutral300;
+          }
         }
 
         label:first-of-type {
@@ -226,9 +338,15 @@
           padding: 0.5rem;
           border-radius: 10px;
           background: $Neutral500;
-          // opacity: 0.2;
           margin-top: 1rem;
-          // margin-bottom: 0.5rem;
+          max-width: 50px;
+          max-height: 50px;
+          overflow: hidden;
+
+          img {
+            width: 100%;
+            height: 100%;
+          }
         }
 
         label:last-of-type {
@@ -236,6 +354,30 @@
           font-size: 1.2rem;
           color: $Neutral500;
           word-spacing: 5px;
+          position: relative;
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: center;
+
+          .changeremoveimg {
+            font-size: 0.5rem;
+            width: 130px;
+            display: none;
+
+            div {
+              padding: 0.2rem;
+              background-color: $Neutral700;
+              display: inline;
+            }
+            a {
+              text-decoration: none;
+              color: $Neutral300;
+            }
+
+            a:hover {
+              text-decoration: underline;
+            }
+          }
         }
       }
 
@@ -265,6 +407,17 @@
     background-color: $Neutral7002;
     font-size: 1.3rem;
     font-family: "Inconsolata", monospace;
+    cursor: pointer;
+
+    &:hover {
+      cursor: pointer;
+      background-color: $Neutral700;
+    }
+
+    &:focus {
+      outline: 1px solid $Neutral300;
+    }
+
     @media (min-width: 430px) {
       width: 100%;
     }
@@ -287,6 +440,10 @@
       z-index: 5;
       border: none;
       border-radius: 10px;
+
+      &:hover {
+        cursor: pointer;
+      }
     }
   }
 }

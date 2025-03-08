@@ -35,7 +35,8 @@
     <div class="bgcircle_top"></div>
     <div class="squigly_line"></div>
 
-    <form action="submit">
+    <form action="/undead.php" method="post" name="ticket_form">
+
 
       <section class="form_hero">
         <div class="form_hero_logo"><svg xmlns="http://www.w3.org/2000/svg" width="209" height="35" fill="none"
@@ -50,15 +51,44 @@
         <p class="form_hero_Desc">Secure your spot at next year's biggest coding conference.</p>
       </section>
 
+      <div class="form_ticket_hidden">
+        <section class="form_ticket">
+          <div class="ticket_container">
+
+            <div class="form_ticket_details">
+              <img src="app/scss/assets/images/logo-full.svg" alt="">
+              <div class="">Jan 31, 2025 / Austin, TX</div>
+            </div>
+            <div class="form_ticket_user">
+              <div class="avatar"><img src="" alt=""></div>
+              <div>
+                <h4 class="userName">GitHub Username</h4>
+                <div class="githubUser">
+                  <span><img src="/app/scss/assets/images/icon-github.svg" alt=""></span>
+                  <span>@yourusername</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <aside>#485955</aside>
+        </section>
+      </div>
+
       <section class="form_input">
-
-
         <div class="form_input_avatar">
           <div class="desc">Upload Avatar</div>
           <div class="dragdrop">
             <label for="files"><img src="app/scss/assets/images/icon-upload.svg" alt=""></label>
-            <label for="files">Drag and drop or click to upload</label>
-            <input type="file" name="files" id="files">
+            <label for="files">
+              <div class="inst">
+                Drag and drop or click to upload
+              </div>
+              <div class="changeremoveimg">
+                <span class="remove"><a href="#">Remove Image</a></span>
+                <span class="change"><a href="">Change Image</a></span>
+              </div>
+            </label>
+            <input type="file" name="files" id="files" onchange="fileValidation(this)">
           </div>
           <div class="warn"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none"
               viewBox="0 0 16 16">
@@ -74,13 +104,13 @@
 
         <div class="form_name">
           <label for="name_input" class="desc">Full Name</label>
-          <input id="name_input" type="text">
+          <input id="name_input" name="name_input" type="text">
         </div>
 
 
         <div class="form_email">
           <label for="email_input" class="desc">Email Address</label>
-          <input id="email_input" type="text" placeholder="example@email.com">
+          <input id="email_input" name="email_input" type="text" placeholder="example@email.com">
         </div>
 
 
@@ -98,44 +128,14 @@
       </section>
 
     </form>
-    <!-- <div class="attribution">
-      Challenge by <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>.
-      Coded by <a href="#">Your Name Here</a>.
-    </div> -->
     <div class="bgcircle_bottom"></div>
     <div class="pattern"></div>
   </div>
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>.
+    Coded by <a href="#">Undead Skeleton</a>.
+  </div>
 
-
-
-
-
-
-  <!-- Drag and drop or click to upload
-
-  Full Name
-
-  Email Address
-  example@email.com
-
-  GitHub Username
-  @yourusername -->
-
-  <!-- Generate My Ticket -->
-
-  <!-- Form ends -->
-
-  <!-- Generated tickets starts -->
-
-  <!-- Congrats, Full Name! Your ticket is ready. -->
-
-  <!-- We've emailed your ticket to Email Address and will send updates in the run up to the event. -->
-
-  <!-- Coding Conf -->
-  <!-- Jan 31, 2025 / Austin, TX -->
-
-  <!-- Generated tickets ends
- -->
   <script src="app/js/script.js"></script>
 </body>
 
