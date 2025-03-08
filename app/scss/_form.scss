@@ -133,7 +133,15 @@
     @media (min-width: 430px) {
       height: 100%;
       width: 100%;
-      display: block;
+    }
+
+    .ticket_container {
+      @media (min-width: 430px) {
+        flex: 2;
+      }
+    }
+
+    aside {
     }
 
     &_details {
@@ -195,6 +203,11 @@
       margin-bottom: 2.5rem;
       font-weight: 600;
       color: $Neutral500;
+
+      @media (min-width: 430px) {
+        flex: 1;
+        height: 15%;
+      }
     }
 
     &_hidden {

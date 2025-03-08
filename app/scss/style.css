@@ -138,7 +138,11 @@ body {
   .form_ticket {
     height: 100%;
     width: 100%;
-    display: block;
+  }
+}
+@media (min-width: 430px) {
+  .form_ticket .ticket_container {
+    flex: 2;
   }
 }
 .form_ticket_details {
@@ -194,6 +198,12 @@ body {
   margin-bottom: 2.5rem;
   font-weight: 600;
   color: hsl(245, 15%, 58%);
+}
+@media (min-width: 430px) {
+  .form_ticket aside {
+    flex: 1;
+    height: 15%;
+  }
 }
 .form_ticket_hidden {
   display: none;
