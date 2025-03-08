@@ -138,23 +138,33 @@
     .ticket_container {
       @media (min-width: 430px) {
         flex: 2;
+        height: 51%;
+        display: flex;
+        flex-direction: column;
       }
-    }
-
-    aside {
     }
 
     &_details {
       padding-top: 1rem;
       margin-left: 2.5rem;
 
+      @media (min-width: 430px) {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+
       img {
         @media (min-width: 430px) {
-          width: 200px;
+          width: 100%;
           height: 100px;
-          object-fit: cover;
+          object-fit: contain;
           border: 1px solid white;
         }
+      }
+
+      & div:last-child {
+        font-size: 2rem;
       }
     }
 
@@ -207,6 +217,8 @@
       @media (min-width: 430px) {
         flex: 1;
         height: 15%;
+        transform: translateY(222px) rotate(90deg);
+        font-size: 2rem;
       }
     }
 

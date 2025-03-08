@@ -143,6 +143,9 @@ body {
 @media (min-width: 430px) {
   .form_ticket .ticket_container {
     flex: 2;
+    height: 51%;
+    display: flex;
+    flex-direction: column;
   }
 }
 .form_ticket_details {
@@ -150,13 +153,23 @@ body {
   margin-left: 2.5rem;
 }
 @media (min-width: 430px) {
+  .form_ticket_details {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+@media (min-width: 430px) {
   .form_ticket_details img {
-    width: 200px;
+    width: 100%;
     height: 100px;
-    -o-object-fit: cover;
-       object-fit: cover;
+    -o-object-fit: contain;
+       object-fit: contain;
     border: 1px solid white;
   }
+}
+.form_ticket_details div:last-child {
+  font-size: 2rem;
 }
 .form_ticket_user {
   margin-left: 2.5rem;
@@ -203,6 +216,8 @@ body {
   .form_ticket aside {
     flex: 1;
     height: 15%;
+    transform: translateY(222px) rotate(90deg);
+    font-size: 2rem;
   }
 }
 .form_ticket_hidden {
