@@ -4,10 +4,70 @@
     // z-index: 5;
     display: flex;
     justify-content: center;
+    padding: 1rem 0.5rem 4rem;
   }
 
   &_intro {
-    font-size: 2rem;
     color: white;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: center;
+    gap: 2rem;
+    margin-bottom: 2rem;
+
+    .logo {
+      text-align: center;
+    }
+
+    &_hero {
+      font-size: 1.5rem;
+      font-weight: 700;
+    }
+
+    &_desc {
+      max-width: 80%;
+    }
+  }
+
+  &_input {
+    & > div :first-child {
+      color: $Neutral0;
+      font-size: 1.3rem;
+    }
+
+    .input {
+      &_avatar {
+        padding: 0 0.2rem;
+      }
+    }
+
+    .dragdrop {
+      border: 1px dashed $Neutral500;
+      background-color: $Neutral7002;
+      color: $Neutral500;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      position: relative;
+
+      &_icon {
+        padding: 0.5rem;
+        background-color: $Neutral7002;
+        // opacity: 1;
+
+        img {
+          opacity: 1;
+        }
+      }
+
+      input {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        z-index: 20;
+        opacity: 0;
+      }
+    }
   }
 }
