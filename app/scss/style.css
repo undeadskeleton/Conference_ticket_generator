@@ -8,6 +8,10 @@ body {
   font-family: "Inconsolata", monospace;
 }
 
+.form_container {
+  display: flex;
+  justify-content: center;
+}
 .form_intro {
   font-size: 2rem;
   color: white;
