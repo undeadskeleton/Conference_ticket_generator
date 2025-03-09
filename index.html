@@ -38,32 +38,33 @@
       <div class="bg_bottom_pattern"></div>
     </div>
 
-    <div class="form_container">
-      <main>
-        <section class="form_intro">
-          <div class="logo">
-            <img src="app/scss/assets/images/logo-full.svg" alt="">
-          </div>
-          <p class="form_intro_hero">Your Journey to Coding Conf 2025 Starts Here!</p>
-          <p class="form_intro_desc">Secure your spot at next year's biggest coding conference.</p>
-        </section>
-        <section class="form_input">
-          <div class="input_avatar">
-            <p>Upload Avatar</p>
-            <div class="dragdrop">
-              <span class="dragdrop_icon">
-                <img src="app/scss/assets/images/icon-upload.svg" alt="">
-              </span>
-              <span>Drag and drop or click to upload</span>
-              <input type="files" accept=".png/.jpg,.jpeg">
-            </div>
-          </div>
-          <div class="input_name"></div>
-          <div class="input_email"></div>
-          <div class="input_gitUsername"></div>
-        </section>
-      </main>
-    </div>
+    <main class="form_container">
+      <section class="form_intro">
+        <div class="logo">
+          <img src="app/scss/assets/images/logo-full.svg" alt="">
+        </div>
+        <p class="form_intro_hero">Your Journey to Coding Conf 2025 Starts Here!</p>
+        <p class="form_intro_desc">Secure your spot at next year's biggest coding conference.</p>
+      </section>
+      <form action="#" method="post" class="form_input">
+        <div class="input_avatar">
+          <p class="head">Upload Avatar</p>
+          <label for="files" class="dragdrop">
+            <span class="dragdrop_icon">
+              <img src="app/scss/assets/images/icon-upload.svg" alt="">
+            </span>
+            <span class="dragdrop_instruction">Drag and drop or click to upload</span>
+            <input id="files" type="file" accept=".png/.jpg,.jpeg">
+          </label>
+          <div class="warn"><img src="app/scss/assets/images/icon-info.svg" alt=""><span>Upload your photo (JPG or
+              PNG,
+              max-size:500KB).</span> </div>
+        </div>
+        <div class="input_name"></div>
+        <div class="input_email"></div>
+        <div class="input_gitUsername"></div>
+      </form action="#" method="post">
+    </main>
 
 
     <div class="attribution">
