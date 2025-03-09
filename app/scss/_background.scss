@@ -1,0 +1,116 @@
+.bg {
+  &_container {
+    background-image: url("assets/images/background-mobile.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center left 100%;
+    //temp values
+    // width: 100vw;
+    height: 100dvh;
+    overflow: hidden;
+    position: absolute;
+    z-index: -1;
+
+    @media (min-width: $mobile) {
+      background-image: url("assets/images/background-desktop.png");
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center left 80%;
+    }
+
+    @media (min-width: $tablet) {
+      background-image: url("assets/images/background-desktop.png");
+    }
+  }
+
+  &_line {
+    background-image: url("assets/images/pattern-lines.svg");
+    background-size: 276%;
+    height: 32dvh;
+    width: 99vw;
+
+    @media (min-width: $mobile) {
+      background-size: contain;
+      background-repeat: repeat-x;
+      height: 50dvh;
+    }
+  }
+
+  &_squiglyLine {
+    background-image: url(assets/images/pattern-squiggly-line-top.svg);
+    background-repeat: no-repeat;
+    background-size: 170%;
+    background-position: center right;
+    height: clamp(85px, 13dvh, 340px);
+    width: 17vw;
+    position: absolute;
+    top: 0;
+    right: 0;
+
+    @media (max-width: $mobile) {
+      top: -3%;
+    }
+    @media (min-width: $mobile) {
+      top: 4%;
+    }
+  }
+
+  &_circle {
+    &_top {
+      background-image: url("assets/images/pattern-circle.svg");
+      background-repeat: no-repeat;
+      height: 8dvh;
+      width: 24vw;
+      background-size: cover;
+      position: absolute;
+      top: -1%;
+      transform: rotate(-90deg);
+
+      @media (min-width: $mobile) {
+        transform: rotate(186deg);
+      }
+
+      @media (min-width: $tablet) {
+        left: 5%;
+        top: -3%;
+        height: 13dvh;
+        width: 19vw;
+        transform: rotate(180deg);
+      }
+    }
+
+    &_bottom {
+      background-image: url(assets/images/pattern-circle.svg);
+      background-size: 200% 100%;
+      background-repeat: no-repeat;
+      background-position: right 0% center;
+      height: 8dvh;
+      width: 24vw;
+      position: absolute;
+      top: 58%;
+      right: 0;
+      transform: rotate(180deg);
+
+      @media (min-width: $mobile) {
+      }
+
+      @media (min-width: $tablet) {
+      }
+    }
+  }
+
+  &_bottom_pattern {
+    background-image: url("assets/images/pattern-squiggly-line-bottom-mobile-tablet.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 13dvh;
+    width: 71vw;
+
+    @media (min-width: $mobile) {
+      background-image: url("assets/images/pattern-squiggly-line-bottom-desktop.svg");
+    }
+  }
+}
